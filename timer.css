@@ -1,0 +1,113 @@
+@font-face {
+    font-family:'DS-DIGI';
+    src: url(DS-DIGI.TTF);
+}
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #252525;
+    color: white;
+    font-family: 'poppins',sans-serif;
+    user-select: none;
+
+}
+.days,.month
+{
+    width: 600px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.days span,
+.month span
+{
+    font-size: 12px;
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    line-height: 30px;
+    border: 2px solid white;
+}
+.day-active
+{
+    color: yellow;
+}
+.clock
+{
+    width: 600px ;
+    height: 100px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    font-family: 'DS-DIGI';
+    font-size: 100px;
+}
+.colon
+{
+    width: 50px;
+    height: 100px;
+    text-align: center;
+    animation:  blink 0.2s ease infinite;
+}
+@keyframes blink {
+from
+{
+    opacity: 0;
+
+}   
+to
+{
+    opacity: 1;
+}
+
+}
+.am span
+{
+    display: block;
+    font-size: 25px;
+    width: 30px;
+    text-align: center;
+}
+.pm span :nth-child(2)
+{
+    margin-top: 30px;
+
+}
+.date{
+    font-size: 40px;
+    font-family:'DIGI' ;
+    font-weight: bold;
+    color: red;
+}
+.active{
+    color: yellow;
+}
+.num
+{
+    width: 50px;
+    height: 100px;
+    text-align: right;
+    position: relative;
+}
+.num::before
+{
+    content: '8';
+    position: absolute;
+    top: 0;
+    right: 0px;
+    color: rgba(113,128, 147, 0.1);
+}
